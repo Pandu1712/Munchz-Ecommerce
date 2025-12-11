@@ -1,16 +1,13 @@
+import TopHeader from "./components/TopHeader";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 
-import './App.css'
-
-function App() {
-
-
+export default function App() {
   return (
     <>
-      <h1 className="text-3xl text-green-400 font-bold underline">
-    Hello world!
-  </h1>
+      <TopHeader />
+      <Header />
+      <Hero />
     </>
-  )
+  );
 }
-
-export default App
