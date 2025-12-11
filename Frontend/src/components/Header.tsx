@@ -3,7 +3,7 @@ import { ShoppingCart, User, Search } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="w-full bg-white shadow-sm">
+    <header className="w-full bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
 
         {/* Logo */}
@@ -18,7 +18,7 @@ export default function Header() {
 
         {/* Menu */}
         <nav className="hidden md:flex gap-10 text-lg font-medium text-gray-700">
-          <a href="#" className="hover:text-green-600">Home</a>
+          <a href="/" className="hover:text-green-600">Home</a>
           <a href="#" className="hover:text-green-600">Shop</a>
           <a href="#" className="hover:text-green-600">About</a>
           <a href="#" className="hover:text-green-600">Track</a>
@@ -38,7 +38,9 @@ export default function Header() {
           </div>
 
           <ShoppingCart className="h-6 w-6 text-gray-700 cursor-pointer" />
+          <a href="/login">
           <User className="h-6 w-6 text-gray-700 cursor-pointer" />
+          </a>
         </div>
       </div>
     </header>

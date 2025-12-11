@@ -9,5 +9,7 @@ import java.util.UUID;
 
 @Repository
 public interface UserOtpRepository extends JpaRepository<UserOtp, UUID> {
-    Optional<UserOtp> findByUserIdAndPurposeAndConsumedFalse(UUID userId,String purpose);
+    Optional<UserOtp> findAllByUserIdAndPurposeAndConsumedFalseOrderByExpiresAtDesc(UUID userId,String purpose);
+    void deleteByUserIdAndPurpose(UUID userId, String purpose);
+
 }
