@@ -1,0 +1,17 @@
+# Java
+**/target/
+**/.mvn/
+**/*.class
+*.iml
+.idea/
+
+# Node
+frontend/node_modules/
+frontend/build/
+
+# Env
+**/.env
+**/*.local
+
+# Logs
+*.log
