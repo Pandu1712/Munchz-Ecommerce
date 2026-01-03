@@ -28,9 +28,10 @@ export default function LoginPage() {
         err.response?.status === 404 &&
         err.response?.data?.message?.includes("signup")
       ) {
-        setError("Email not exists. Please signup.");
-      } else {
+        
         setError("Failed to send OTP. Try again.");
+      } else {
+     setError("Email not exists. Please signup.");
       }
     } finally {
       setLoading(false);
@@ -50,6 +51,7 @@ export default function LoginPage() {
     try {
       const apiRes = await googleLogin(res.credential!);
       localStorage.setItem("token", apiRes.data.token);
+       localStorage.setItem("userId", apiRes.data.userId);
       navigate("/");
     } catch (err: any) {
       setError(err.response?.data?.message || "Google login failed");
