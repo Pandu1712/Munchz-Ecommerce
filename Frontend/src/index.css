@@ -30,6 +30,23 @@ body {
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+
 .input {
   width: 100%;
   padding: 10px;
@@ -41,7 +58,9 @@ body {
 .input:focus {
   border-color: #16a34a;
   box-shadow: 0 0 0 1px #16a34a;
+
 }
+
 /* Hide scrollbar but keep scroll */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -51,3 +70,6 @@ body {
   -ms-overflow-style: none;  /* IE & Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+}
+

@@ -37,9 +37,13 @@ import AboutMain from "./pages/Aboutmain";
 import AdminCoupons from "./pages/AdminCoupons";
 import AddStockDetails from "./pages/AddStockDetails";
 import StockDetails from "./pages/StockDetails";
+
 import AddOfflineStock from "./pages/OfflineStockAdd";
 import OfflineInventoryList from "./pages/OfflineInventoryList";
 import AdminCompleteStock from "./pages/AdminCompleteStock";
+
+import OrderSuccessPage from "./pages/OrderSuccessPage";
+
 
 
 
@@ -138,6 +142,8 @@ export default function App() {
           <Dashboard />
         </AdminRoute>
       } />
+
+
       <Route path="/cart" element={
 
         <>
@@ -146,10 +152,22 @@ export default function App() {
 
           <CartPage />
 
-          <Footer />
+          <Footer/>
+        
         </>
 
       } />
+
+        <Route path="/order-success" element={
+          <>
+            <TopHeader />
+          <Header />
+          <OrderSuccessPage />
+               <Footer/>
+          </>
+          } />
+
+          
       <Route path="/checkout" element={
         <> 
         <TopHeader/>
@@ -231,6 +249,7 @@ export default function App() {
  <Route path="/offline-inventory" element={<Layout><OfflineInventoryList /></Layout>} />
   <Route path="/offline-inventorys/add" element={<Layout><AddOfflineStock /></Layout>} />
   <Route path="/AdminCompleteStock" element={<Layout><AdminCompleteStock /></Layout>} />
+
 
     </Routes>
 
